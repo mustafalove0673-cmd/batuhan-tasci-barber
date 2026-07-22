@@ -14,77 +14,51 @@ interface AdBannerProps {
 export default function AdBanner({ title, subtitle, ctaText, ctaLink, bgImage }: AdBannerProps) {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
 
   return (
     <section ref={ref} className="relative overflow-hidden">
-      {/* full-bleed background */}
       <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
         <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url('${bgImage}')` }} />
       </motion.div>
-      {/* heavy overlay for readability */}
-      <div className="absolute inset-0 bg-deep-black/75" />
-      {/* diagonal slash accent */}
-      <div className="absolute inset-0 z-[1] pointer-events-none">
-        <div className="absolute -top-20 -right-20 w-96 h-96 border border-gold/[0.06] rotate-12" />
-        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] border border-gold/[0.04] -rotate-6" />
-      </div>
-      {/* content — tight, organic */}
-      <div className="relative z-10 py-12 md:py-16 px-6 md:px-16 lg:px-24">
+      <div className="absolute inset-0 bg-deep-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-deep-black/60 via-transparent to-deep-black/40" />
+
+      <div className="relative z-10 py-16 md:py-24 px-5 md:px-16 lg:px-24">
         <div className="max-w-2xl">
-          <motion.p
-            className="text-gold/60 text-[10px] font-mono tracking-[0.5em] mb-3"
-            initial={{ opacity: 0, x: -15 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            &bull; özel teklif &bull;
-          </motion.p>
+          <div className="flex items-center gap-4 mb-5">
+            <div className="w-8 h-1 bg-gold" />
+            <span className="text-gold/70 text-xs md:text-sm font-mono tracking-[0.4em] font-bold">özel teklif</span>
+          </div>
           <motion.h3
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-cream/95 leading-[1] tracking-tight"
-            initial={{ opacity: 0, y: 30 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black text-cream leading-[0.95] tracking-tight"
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.1 }}
+            transition={{ duration: 0.7 }}
           >
             {title}
           </motion.h3>
           <motion.p
-            className="mt-3 text-sm text-cream/40 max-w-md leading-relaxed"
+            className="mt-4 text-base md:text-lg text-cream/50 max-w-md leading-relaxed font-bold"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.25 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
           >
             {subtitle}
           </motion.p>
-          <motion.div
-            className="mt-6"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-          >
+          <motion.div className="mt-8" initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.25 }}>
             <a
               href={ctaLink}
-              className="group relative inline-flex items-center gap-2 text-gold text-xs tracking-[0.3em] font-mono border-b border-gold/30 pb-1 hover:border-gold/60 transition-colors duration-300"
+              className="group inline-flex items-center gap-2 text-gold text-sm md:text-base tracking-[0.2em] font-mono font-bold border-b border-gold/30 hover:border-gold/60 pb-1 transition-colors duration-300"
             >
               <span>{ctaText}</span>
-              <motion.span
-                className="inline-block"
-                animate={{ x: [0, 4, 0] }}
-                transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-              >
-                →
-              </motion.span>
+              <motion.span className="inline-block" animate={{ x: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}>→</motion.span>
             </a>
           </motion.div>
         </div>
       </div>
-      {/* top/bottom thin lines */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
     </section>
   );
 }

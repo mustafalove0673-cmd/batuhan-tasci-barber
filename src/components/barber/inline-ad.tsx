@@ -10,30 +10,32 @@ interface InlineAdProps {
 export default function InlineAd({ text, subtext }: InlineAdProps) {
   return (
     <motion.div
-      className="relative py-5 md:py-6 px-6 md:px-16 lg:px-24 overflow-hidden"
+      className="relative py-6 md:py-8 px-5 md:px-16 lg:px-24 overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.6 }}
     >
-      {/* background accent */}
-      <div className="absolute inset-0 bg-gradient-to-r from-orange/[0.03] via-transparent to-orange/[0.02]" />
-      {/* animated slash line */}
+      <div className="absolute inset-0 bg-gradient-to-r from-orange/[0.04] via-transparent to-gold/[0.02]" />
       <motion.div
-        className="absolute left-0 top-0 bottom-0 w-px bg-orange/20"
+        className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-orange/40 via-orange/20 to-transparent"
         initial={{ scaleY: 0, originY: 0 }}
         whileInView={{ scaleY: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
       />
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
         <div>
-          <p className="text-sm md:text-base font-bold text-cream/80 tracking-tight">{text}</p>
-          <p className="text-[11px] text-cream/25 font-mono tracking-wider mt-0.5">{subtext}</p>
+          <p className="text-base md:text-lg font-black text-cream/85 tracking-tight">{text}</p>
+          <p className="text-xs text-cream/30 font-mono tracking-wider mt-1 font-bold">{subtext}</p>
         </div>
         <motion.a
           href="#iletisim"
-          className="text-orange text-[10px] font-mono tracking-[0.3em] border-b border-orange/20 hover:border-orange/50 pb-0.5 transition-colors duration-300 self-start"
+          className="text-orange text-xs font-mono tracking-[0.25em] font-bold border-b border-orange/30 hover:border-orange/60 pb-1 self-start transition-colors duration-300"
+          initial={{ opacity: 0, x: 15 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
         >
           randevu →
         </motion.a>

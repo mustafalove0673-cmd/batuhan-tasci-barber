@@ -3,8 +3,6 @@
 import dynamic from 'next/dynamic';
 import HeroSection from '@/components/barber/hero-section';
 import MarqueeStrip from '@/components/barber/marquee-strip';
-import SectionDivider from '@/components/barber/section-divider';
-import EyeCatcher from '@/components/barber/eye-catcher';
 import InlineAd from '@/components/barber/inline-ad';
 import StatsSection from '@/components/barber/stats-section';
 import ServicesSection from '@/components/barber/services-section';
@@ -26,37 +24,19 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
 
-        <EyeCatcher variant="barcode" />
-
         <StatsSection />
 
-        <EyeCatcher variant="dashed-line" />
+        <InlineAd text="ilk ziyaretinize %20 indirim" subtext="sınırlı süre — kaçırmayın" />
 
         <ServicesSection />
 
         <MarqueeStrip text="kesim tıraş stil sakal fade klasik modern" speed={22} opacity={0.04} />
 
-        <InlineAd text="ilk ziyaretinize %20 indirim" subtext="sınırlı süre — kaçırmayın" />
-
-        <EyeCatcher variant="number-ticker" />
-
-        <SectionDivider variant="text" label="instagram" />
+        <InlineAd text="sakal bakım paketi — özel fiyat" subtext="kesim + şekillendirme + bakım birlikte" />
 
         <PhoneMockups />
 
-        <EyeCatcher variant="slash-accent" />
-
-        <MarqueeStrip text="berber deneyim kalite profesyonel" speed={35} opacity={0.03} />
-
-        <InlineAd text="sakal bakım paketi — özel fiyat" subtext="kesim + şekillendirme + bakım birlikte" />
-
-        <EyeCatcher variant="smoke-divider" />
-
         <Gallery />
-
-        <EyeCatcher variant="dashed-line" />
-
-        <SectionDivider variant="text" label="teklifler" />
 
         <AdBanner
           title="özel berber deneyimi"
@@ -66,15 +46,9 @@ export default function Home() {
           bgImage="/images/barber/ad-bg.png"
         />
 
-        <EyeCatcher variant="barcode" />
-
         <InlineAd text="her cuma özel indirim" subtext="takip edin, fırsatları kaçırmayın" />
 
-        <EyeCatcher variant="slash-accent" />
-
         <ContactSection />
-
-        <EyeCatcher variant="smoke-divider" />
 
         <MarqueeStrip text="teşekkürler" speed={50} opacity={0.03} />
       </main>
