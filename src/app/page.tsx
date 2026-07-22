@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import HeroSection from '@/components/barber/hero-section';
 import MarqueeStrip from '@/components/barber/marquee-strip';
 import SectionDivider from '@/components/barber/section-divider';
+import EyeCatcher from '@/components/barber/eye-catcher';
 import InlineAd from '@/components/barber/inline-ad';
 import StatsSection from '@/components/barber/stats-section';
 import ServicesSection from '@/components/barber/services-section';
@@ -25,31 +26,35 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
 
-        <MarqueeStrip text="kesim tıraş stil sakal fade klasik modern" speed={24} opacity={0.04} />
+        <EyeCatcher variant="barcode" />
 
         <StatsSection />
 
-        <SectionDivider variant="dots" />
+        <EyeCatcher variant="dashed-line" />
 
         <ServicesSection />
 
-        <SectionDivider variant="slash" />
+        <MarqueeStrip text="kesim tıraş stil sakal fade klasik modern" speed={22} opacity={0.04} />
 
         <InlineAd text="ilk ziyaretinize %20 indirim" subtext="sınırlı süre — kaçırmayın" />
+
+        <EyeCatcher variant="number-ticker" />
 
         <SectionDivider variant="text" label="instagram" />
 
         <PhoneMockups />
 
-        <SectionDivider variant="cross" />
+        <EyeCatcher variant="slash-accent" />
 
-        <MarqueeStrip text="berber deneyim kalite profesyonel" speed={38} opacity={0.03} />
+        <MarqueeStrip text="berber deneyim kalite profesyonel" speed={35} opacity={0.03} />
 
         <InlineAd text="sakal bakım paketi — özel fiyat" subtext="kesim + şekillendirme + bakım birlikte" />
 
-        <SectionDivider variant="zigzag" />
+        <EyeCatcher variant="smoke-divider" />
 
         <Gallery />
+
+        <EyeCatcher variant="dashed-line" />
 
         <SectionDivider variant="text" label="teklifler" />
 
@@ -61,15 +66,17 @@ export default function Home() {
           bgImage="/images/barber/ad-bg.png"
         />
 
-        <SectionDivider variant="dots" />
+        <EyeCatcher variant="barcode" />
 
         <InlineAd text="her cuma özel indirim" subtext="takip edin, fırsatları kaçırmayın" />
 
-        <SectionDivider variant="slash" />
+        <EyeCatcher variant="slash-accent" />
 
         <ContactSection />
 
-        <MarqueeStrip text="teşekkürler" speed={55} opacity={0.03} />
+        <EyeCatcher variant="smoke-divider" />
+
+        <MarqueeStrip text="teşekkürler" speed={50} opacity={0.03} />
       </main>
 
       <Footer />

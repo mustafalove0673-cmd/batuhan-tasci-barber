@@ -1,0 +1,1748 @@
+[info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[log] [HMR] connected
+[error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="page.tsx">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+              <Home params={Promise} searchParams={Promise}>
+                <div className="min-h-scre...">
+                  <LoadableComponent>
+                  <StickyButtons>
+                  <main className="flex-1">
+                    <HeroSection>
+                    <EyeCatcher variant="barcode">
+                      <div className="relative p...">
+                        <div>
+                        <motion.div className="flex items..." initial={{opacity:0}} whileInView={{opacity:0.15}} ...>
+                          <div className="flex items..." style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "44.26941100005449%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"48.1385%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "22.824914668896678%"
+-                               height: "71.0832%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "29.478470518450283%"
+-                               height: "72.5629%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "44.81060574053407%"
+-                               height: "67.175%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "80.19970274527965%"
+-                               height: "70.0675%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "42.67495353975269%"
+-                               height: "37.5644%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "82.12400039282684%"
+-                               height: "33.9143%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "93.72987647382433%"
+-                               height: "98.6969%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "52.427695340699145%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "49.68407762865728%"
+-                               height: "86.706%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "12.647470648689174%"
+-                               height: "21.9494%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "10.909263087605382%"
+-                               height: "55.4958%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "21.66408536959439%"
+-                               height: "48.2031%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "29.877227329281453%"
+-                               height: "30.7033%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "28.934187769767483%"
+-                               height: "14.6994%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "44.51194795466774%"
+-                               height: "71.9884%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "70.67011877650624%"
+-                               height: "95.3715%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "45.94799223135067%"
+-                               height: "28.3136%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "48.81514671594126%"
+-                               height: "44.8408%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"43.1303%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "85.58276527443749%"
+-                               height: "84.5249%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "50.81135659938412%"
+-                               height: "49.0758%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "94.00370899289399%"
+-                               height: "87.8882%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"26.2043%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "37.24624787303289%"
+-                               height: "55.1381%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "95.52237286743481%"
+-                               height: "95.6984%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "93.60179407683056%"
+-                               height: "79.953%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "81.37667667793349%"
+-                               height: "96.4144%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "40.23604033876664%"
+-                               height: "45.4296%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "98.32777990570128%"
+-                               height: "49.3218%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "90.36524217514162%"
+-                               height: "34.352%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "90.19605590619318%"
+-                               height: "82.356%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "80.66613146470203%"
+-                               height: "53.0811%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "46.42970932663246%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "16.37706533148302%"
+-                               height: "81.5927%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "43.525169773751124%"
+-                               height: "15.1733%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"82.6156%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "77.12228166873565%"
+-                               height: "73.1302%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "83.33837403886972%"
+-                               height: "18.9933%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "95.20017115165335%"
+-                               height: "60.7868%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "63.818219818346776%"
+-                               height: "79.0818%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "79.71208337900973%"
+-                               height: "11.3609%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "30.378292138443154%"
+-                               height: "90.6004%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "80.32257340464088%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "38.53249694224154%"
+-                               height: "66.918%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "21.373527148831105%"
+-                               height: "11.8003%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "19.950679118386837%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "51.52128456530497%"
+-                               height: "44.1115%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "83.22274859254534%"
+-                               height: "70.68%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "92.38042260746239%"
+-                               height: "25.6047%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "93.74723510298799%"
+-                               height: "12.3619%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "49.23499913529881%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "49.36911701307201%"
+-                               height: "84.7736%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "94.42995131815799%"
+-                               height: "59.9227%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "89.96464787019445%"
+-                               height: "36.2124%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "28.492137677692796%"
+-                               height: "11.9075%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "29.936426800950233%"
+-                               height: "12.6395%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "75.13758109471634%"
+-                               height: "72.9629%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "96.01907961636469%"
+-                               height: "93.6254%"
+                              }}
+                            >
+                        ...
+                    <StatsSection>
+                    <EyeCatcher>
+                    <ServicesSection>
+                    <MarqueeStrip>
+                    <InlineAd>
+                    <EyeCatcher>
+                    <SectionDivider>
+                    <PhoneMockups>
+                    <EyeCatcher>
+                    <MarqueeStrip>
+                    <InlineAd>
+                    <EyeCatcher>
+                    <Gallery>
+                    <EyeCatcher>
+                    <SectionDivider>
+                    <AdBanner>
+                    <EyeCatcher variant="barcode">
+                      <div className="relative p...">
+                        <div>
+                        <motion.div className="flex items..." initial={{opacity:0}} whileInView={{opacity:0.15}} ...>
+                          <div className="flex items..." style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "13.308468919774208%"
+-                               height: "49.3792%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "68.17878623691563%"
+-                               height: "77.3701%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "86.54999303649149%"
+-                               height: "38.9868%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "30.442910918370846%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "79.85716368324744%"
+-                               height: "29.7965%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "68.91880652428462%"
+-                               height: "45.6566%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "21.91223869663803%"
+-                               height: "76.3156%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"37.8511%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"49.6489%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "16.930109358645296%"
+-                               height: "49.6077%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "74.59758402629771%"
+-                               height: "63.2094%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"75.5025%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "15.511586614517803%"
+-                               height: "18.6428%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "94.56152329033455%"
+-                               height: "26.6533%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "61.11730799901621%"
+-                               height: "52.2051%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "14.190962666283458%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "88.76675677248174%"
+-                               height: "74.2701%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "32.687142911841626%"
+-                               height: "87.0085%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "17.908078650228987%"
+-                               height: "32.4552%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "95.78102396805654%"
+-                               height: "44.1178%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"71.7875%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "80.86199897444361%"
+-                               height: "80.9774%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "60.58350798772377%"
+-                               height: "10.4748%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "89.24913203683299%"
+-                               height: "16.6066%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "28.513403393705772%"
+-                               height: "29.4052%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "21.886069129272222%"
+-                               height: "79.3639%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"16.8319%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "24.763329619138986%"
+-                               height: "60.5086%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "30.02049875458217%"
+-                               height: "82.3858%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "43.4503396949264%"
+-                               height: "64.8698%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "56.28194565506094%"
+-                               height: "23.3549%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "58.124365209544436%"
+-                               height: "87.152%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "31.054168369967883%"
+-                               height: "46.0902%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "20.831476450443432%"
+-                               height: "53.7812%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "41.223329552062495%"
+-                               height: "94.6133%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "24.552998173158603%"
+-                               height: "82.4844%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "82.82777269723994%"
+-                               height: "57.239%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "65.64088828137245%"
+-                               height: "94.4805%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "60.02710124581362%"
+-                               height: "49.0824%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "43.69624530784364%"
+-                               height: "48.1055%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "11.64748822251619%"
+-                               height: "61.9608%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "90.1059113213744%"
+-                               height: "36.7962%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "91.34554761410266%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "45.06034141279945%"
+-                               height: "80.5136%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "57.93874042871381%"
+-                               height: "69.2498%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "41.129355702509486%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "15.00308393429467%"
+-                               height: "22.7907%"
+                              }}
+                            >
+                            <div>
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "91.80985475439711%"
+-                               height: "75.3868%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "42.25431809508752%"
+-                               height: "17.5635%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "55.83670544512414%"
+-                               height: "55.8772%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "15.271662974540689%"
+-                               height: "70.0902%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "68.41347556471014%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "47.33666722837344%"
+-                               height: "97.962%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "32.33735679498913%"
+-                               height: "13.9384%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "40.159384447578994%"
+-                               height: "51.0001%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "24.37140921460147%"
+-                               height: "92.0427%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "67.77218416524691%"
+-                               height: "74.6468%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "54.078472929005464%"
+-                               height: "57.6549%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "99.8901338657743%"
+-                               height: "60.084%"
+                              }}
+                            >
+                        ...
+                    ...
+                  ...
+          ...
+        ...
+
+[warning] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[log] [HMR] connected
+[error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+          <SegmentViewNode type="page" pagePath="page.tsx">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+              <Home params={Promise} searchParams={Promise}>
+                <div className="min-h-scre...">
+                  <LoadableComponent>
+                  <StickyButtons>
+                  <main className="flex-1">
+                    <HeroSection>
+                    <EyeCatcher variant="barcode">
+                      <div className="relative p...">
+                        <div>
+                        <motion.div className="flex items..." initial={{opacity:0}} whileInView={{opacity:0.15}} ...>
+                          <div className="flex items..." style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "54.38356099489896%"
+-                               height: "18.8118%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "21.93131643976488%"
+-                               height: "38.8532%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "42.57119811624971%"
+-                               height: "98.8865%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "86.90493390025658%"
+-                               height: "63.406%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "51.63129110831621%"
+-                               height: "38.8215%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "37.69936549238042%"
+-                               height: "18.8904%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "49.420522448376325%"
+-                               height: "87.637%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "14.69597101791651%"
+-                               height: "52.229%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "53.815789049101696%"
+-                               height: "95.3677%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "99.48163049030585%"
+-                               height: "34.4577%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "88.68517962947021%"
+-                               height: "41.526%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "90.92020017262755%"
+-                               height: "47.4456%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "81.82197686012272%"
+-                               height: "71.8423%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "59.48160701352796%"
+-                               height: "76.4446%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "69.17830734286304%"
+-                               height: "67.9584%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "75.44401358152163%"
+-                               height: "85.8484%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"98.4647%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "72.63195094610973%"
+-                               height: "72.9116%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "59.504752081095056%"
+-                               height: "54.1464%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "53.19873252091731%"
+-                               height: "17.6795%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "61.1829144088719%"
+-                               height: "99.1122%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "97.69568514319012%"
+-                               height: "24.2984%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "75.64651042042307%"
+-                               height: "51.4463%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "71.79787305085166%"
+-                               height: "53.5664%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "29.923800723949967%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "95.96882131691586%"
+-                               height: "75.3531%"
+                              }}
+                            >
+                            <div>
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "81.99780352210851%"
+-                               height: "54.1665%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "59.30849162157021%"
+-                               height: "38.4276%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"70.3858%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "37.79541611681656%"
+-                               height: "21.7172%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "64.60444431024507%"
+-                               height: "53.261%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "44.31747131709706%"
+-                               height: "52.6305%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "33.409577654706865%"
+-                               height: "12.6885%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "71.41225891490686%"
+-                               height: "11.9898%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "88.3933534220612%"
+-                               height: "68.0867%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "68.78684844458567%"
+-                               height: "16.9113%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "63.75430859623227%"
+-                               height: "25.6246%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"50.8532%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "43.056351831535835%"
+-                               height: "15.2178%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "96.46045852281911%"
+-                               height: "64.9095%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "10.828868157300297%"
+-                               height: "33.0355%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "40.467061820747205%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "24.53439146527915%"
+-                               height: "80.7697%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "15.115189220341385%"
+-                               height: "10.647%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "83.22419847220432%"
+-                               height: "89.5387%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "65.4219619373061%"
+-                               height: "18.6874%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "56.17174762927559%"
+-                               height: "74.3471%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "84.82714659809827%"
+-                               height: "27.5213%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "50.96653506495831%"
+-                               height: "80.8834%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "87.13191820425489%"
+-                               height: "67.8626%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"32.5352%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "26.294218297439343%"
+-                               height: "32.8105%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "17.405056135698228%"
+-                               height: "96.2497%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "69.5086363536966%"
+-                               height: "44.5659%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "19.901087590840806%"
+-                               height: "12.3026%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "53.620627146901455%"
+-                               height: "18.3391%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"54.4754%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "24.664397566667773%"
+-                               height: "41.8227%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "62.83744377552255%"
+-                               height: "49.7533%"
+                              }}
+                            >
+                        ...
+                    <StatsSection>
+                    <EyeCatcher>
+                    <ServicesSection>
+                    <MarqueeStrip>
+                    <InlineAd>
+                    <EyeCatcher>
+                    <SectionDivider>
+                    <PhoneMockups>
+                    <EyeCatcher>
+                    <MarqueeStrip>
+                    <InlineAd>
+                    <EyeCatcher>
+                    <Gallery>
+                    <EyeCatcher>
+                    <SectionDivider>
+                    <AdBanner>
+                    <EyeCatcher variant="barcode">
+                      <div className="relative p...">
+                        <div>
+                        <motion.div className="flex items..." initial={{opacity:0}} whileInView={{opacity:0.15}} ...>
+                          <div className="flex items..." style={{opacity:0}} ref={function useMotionRef.useCallback}>
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "51.01065915741365%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"27.266%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "28.68564458437651%"
+-                               height: "31.476%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "21.09759087737315%"
+-                               height: "14.8051%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "19.453225737802192%"
+-                               height: "68.7584%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "17.97095016030381%"
+-                               height: "78.3259%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"92.2009%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "97.043403726779%"
+-                               height: "49.4763%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "39.10673132208715%"
+-                               height: "94.7765%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"23.9673%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "25.208874167114182%"
+-                               height: "30.9821%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "54.87657074928076%"
+-                               height: "70.9499%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "68.18466242861467%"
+-                               height: "80.1113%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "47.12177830609352%"
+-                               height: "27.0384%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "71.17788858255956%"
+-                               height: "71.6349%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "91.16294960324805%"
+-                               height: "62.56%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "27.091566224836093%"
+-                               height: "87.7149%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "84.28659843115057%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "40.340053100098125%"
+-                               height: "21.9123%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "28.22560292302203%"
+-                               height: "52.7167%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "51.79092345638199%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "15.0481526016923%"
+-                               height: "62.1824%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "14.576699166297214%"
+-                               height: "18.2153%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "52.82078827669084%"
+-                               height: "75.0098%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "30.034494035327995%"
+-                               height: "59.6801%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "36.921917488291534%"
+-                               height: "37.0484%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "10.362156734659578%"
+-                               height: "61.0056%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "79.48114221614489%"
+-                               height: "59.3849%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "34.15023594220244%"
+-                               height: "89.5658%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"94.8169%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "26.801242352372135%"
+-                               height: "96.1562%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "52.396917123443544%"
+-                               height: "61.268%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "15.838714520718566%"
+-                               height: "78.2631%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "59.0098181972995%"
+-                               height: "67.7798%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "69.92121795570614%"
+-                               height: "17.4387%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "80.24518199017741%"
+-                               height: "53.8205%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "20.893686948081715%"
+-                               height: "82.5562%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "63.49355165847743%"
+-                               height: "56.1725%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "91.53256562347947%"
+-                               height: "79.8894%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "24.961680456890623%"
+-                               height: "93.2737%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "71.26463176041807%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "92.41467273330188%"
+-                               height: "92.123%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "83.29136052339379%"
+-                               height: "80.4521%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "80.41994844418684%"
+-                               height: "75.591%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "70.78589793565133%"
+-                               height: "50.67%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "19.46975745127698%"
+-                               height: "38.719%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"13.0963%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "18.416455232428508%"
+-                               height: "16.3686%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "98.01066269368057%"
+-                               height: "56.3522%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "59.145984380413864%"
+-                               height: "79.788%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "38.72827716989804%"
+-                               height: "10%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "51.062340911303416%"
+-                               height: "99.3833%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "79.37359967674486%"
+-                               height: "76.3302%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "13.717273325300393%"
+-                               height: "71.7353%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "96.02052818339331%"
+-                               height: "44.412%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "59.99307583556286%"
+-                               height: "59.6497%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "21.580390993928443%"
+-                               height: "71.904%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
+                              style={{
++                               height: "16.470552360810064%"
+-                               height: "97.8434%"
+                              }}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"25.9552%"}}
+                            >
+                            <div
+                              className="w-[1px] bg-gold"
++                             style={{height:"10%"}}
+-                             style={{height:"49.9334%"}}
+                            >
+                        ...
+                    ...
+                  ...
+          ...
+        ...
+
+[warning] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.

@@ -432,3 +432,150 @@
 .float-animation {
   animation: float 6s ease-in-out infinite;
 }
+
+/* glitch text effect */
+@keyframes glitch {
+  0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+  20% { clip-path: inset(20% 0 60% 0); transform: translate(-2px, 2px); }
+  40% { clip-path: inset(50% 0 30% 0); transform: translate(2px, -1px); }
+  60% { clip-path: inset(10% 0 80% 0); transform: translate(-1px, 1px); }
+  80% { clip-path: inset(70% 0 10% 0); transform: translate(1px, -2px); }
+}
+
+.glitch-text {
+  position: relative;
+}
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.glitch-text::before {
+  color: #d4722a;
+  animation: glitch 3s infinite;
+  opacity: 0.3;
+}
+.glitch-text::after {
+  color: #c9a96e;
+  animation: glitch 3s infinite reverse;
+  opacity: 0.2;
+}
+
+/* scanner line */
+@keyframes scan-line {
+  0% { top: -10%; }
+  100% { top: 110%; }
+}
+
+.scan-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212, 114, 42, 0.3), transparent);
+  animation: scan-line 4s linear infinite;
+  pointer-events: none;
+}
+
+/* stroke dash animation for SVG */
+@keyframes dash-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* organic blob pulse */
+@keyframes blob-pulse {
+  0%, 100% {
+    clip-path: polygon(0% 5%, 5% 0%, 20% 2%, 40% 0%, 65% 1%, 85% 0%, 100% 4%, 100% 95%, 95% 100%, 80% 98%, 55% 100%, 35% 99%, 15% 100%, 0% 96%);
+  }
+  50% {
+    clip-path: polygon(2% 3%, 8% 0%, 25% 1%, 45% 0%, 60% 2%, 80% 0%, 98% 3%, 100% 97%, 92% 100%, 75% 99%, 50% 100%, 30% 98%, 10% 100%, 0% 95%);
+  }
+}
+
+.blob-pulse {
+  animation: blob-pulse 6s ease-in-out infinite;
+}
+
+/* ticker tape for between sections */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ticker {
+  animation: ticker 20s linear infinite;
+}
+
+.ticker-reverse {
+  animation: ticker 25s linear infinite reverse;
+}
+
+/* noise grain shift */
+@keyframes grain-shift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-2%, 1%) rotate(0.5deg); }
+  50% { transform: translate(1%, -1%) rotate(-0.5deg); }
+  75% { transform: translate(-1%, 2%) rotate(0.3deg); }
+}
+
+.grain-shift {
+  animation: grain-shift 0.8s steps(2) infinite;
+}
+
+/* reveal mask */
+@keyframes reveal-mask {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.reveal-mask {
+  animation: reveal-mask 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* border trace */
+@keyframes border-trace {
+  0% { clip-path: polygon(0 0, 0 0, 0 0, 0 0); }
+  25% { clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+  50% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+/* staggered fade in for children */
+@keyframes cascade-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.cascade-in > * {
+  opacity: 0;
+  animation: cascade-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.cascade-in > *:nth-child(1) { animation-delay: 0.05s; }
+.cascade-in > *:nth-child(2) { animation-delay: 0.1s; }
+.cascade-in > *:nth-child(3) { animation-delay: 0.15s; }
+.cascade-in > *:nth-child(4) { animation-delay: 0.2s; }
+.cascade-in > *:nth-child(5) { animation-delay: 0.25s; }
+.cascade-in > *:nth-child(6) { animation-delay: 0.3s; }
+.cascade-in > *:nth-child(7) { animation-delay: 0.35s; }
+.cascade-in > *:nth-child(8) { animation-delay: 0.4s; }
+
+/* horizontal line grow */
+@keyframes h-line-grow {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* flash overlay */
+@keyframes flash {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}

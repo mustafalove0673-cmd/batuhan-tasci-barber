@@ -20,10 +20,10 @@ export default function Footer() {
       <motion.div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none select-none" initial={{ opacity: 0 }} whileInView={{ opacity: 0.025 }} viewport={{ once: true }}>
         <div className="flex whitespace-nowrap marquee" style={{ animationDuration: '50s' }}>
           <span className="text-[14vw] font-bold text-cream leading-none tracking-tighter">
-            batuhan taşçı &bull; men&aposs hair &bull;
+            batuhan taşçı &bull; men's hair &bull;
           </span>
           <span className="text-[14vw] font-bold text-cream leading-none tracking-tighter">
-            batuhan taşçı &bull; men&aposs hair &bull;
+            batuhan taşçı &bull; men's hair &bull;
           </span>
         </div>
       </motion.div>
