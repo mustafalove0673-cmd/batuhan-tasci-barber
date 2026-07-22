@@ -4,7 +4,7 @@ import { db } from '@/lib/db';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, message } = body;
+    const { name, phone, email, message } = body;
 
     if (!name?.trim() || !message?.trim()) {
       return NextResponse.json({ error: 'ad ve mesaj gereklidir' }, { status: 400 });
@@ -13,6 +13,8 @@ export async function POST(request: Request) {
     await db.contactMessage.create({
       data: {
         name: name.trim(),
+        phone: phone?.trim() || '',
+        email: email?.trim() || '',
         message: message.trim(),
       },
     });

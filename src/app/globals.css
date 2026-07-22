@@ -44,6 +44,11 @@
   --color-deep-black: #0a0a0a;
   --color-dark-card: #111111;
   --color-dark-border: #1a1a1a;
+  --color-orange: #d4722a;
+  --color-orange-light: #e8934a;
+  --color-orange-dark: #a85820;
+  --color-gray-mid: #3a3a3a;
+  --color-gray-light: #555555;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

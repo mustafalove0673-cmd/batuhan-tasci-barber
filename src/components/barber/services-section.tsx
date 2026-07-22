@@ -47,7 +47,7 @@ export default function ServicesSection() {
   const bgX = useTransform(scrollYProgress, [0, 1], ['0%', '-8%']);
 
   return (
-    <section ref={sectionRef} id="hizmetler" className="relative py-16 md:py-24 overflow-hidden">
+    <section ref={sectionRef} id="hizmetler" className="relative py-20 md:py-28 overflow-hidden">
       {/* special background with parallax texture */}
       <motion.div className="absolute inset-0 opacity-15" style={{ x: bgX }}>
         <div
@@ -64,7 +64,7 @@ export default function ServicesSection() {
         {/* header — left aligned, tight */}
         <div className="mb-10 md:mb-14">
           <motion.p
-            className="text-gold/50 text-[10px] font-mono tracking-[0.5em]"
+            className="text-orange/50 text-[10px] font-mono tracking-[0.5em]"
             initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

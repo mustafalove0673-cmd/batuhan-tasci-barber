@@ -17,10 +17,10 @@ export default function InlineAd({ text, subtext }: InlineAdProps) {
       transition={{ duration: 0.8 }}
     >
       {/* background accent */}
-      <div className="absolute inset-0 bg-gradient-to-r from-gold/[0.03] via-transparent to-gold/[0.02]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-orange/[0.03] via-transparent to-orange/[0.02]" />
       {/* animated slash line */}
       <motion.div
-        className="absolute left-0 top-0 bottom-0 w-px bg-gold/20"
+        className="absolute left-0 top-0 bottom-0 w-px bg-orange/20"
         initial={{ scaleY: 0, originY: 0 }}
         whileInView={{ scaleY: 1 }}
         viewport={{ once: true }}
@@ -33,7 +33,7 @@ export default function InlineAd({ text, subtext }: InlineAdProps) {
         </div>
         <motion.a
           href="#iletisim"
-          className="text-gold text-[10px] font-mono tracking-[0.3em] border-b border-gold/20 hover:border-gold/50 pb-0.5 transition-colors duration-300 self-start"
+          className="text-orange text-[10px] font-mono tracking-[0.3em] border-b border-orange/20 hover:border-orange/50 pb-0.5 transition-colors duration-300 self-start"
         >
           randevu →
         </motion.a>

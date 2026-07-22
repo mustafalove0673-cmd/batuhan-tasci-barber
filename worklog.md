@@ -1,49 +1,29 @@
 # barber website worklog
 
 ---
-Task ID: 1
+Task ID: hero-rewrite
 Agent: main
-Task: proje yapısını incele, görselleri oluştur
+Task: hero section, contact info, sticky buttons, stats, footer complete redesign
 
 Work Log:
-- Proje yapısı incelendi (Next.js 16, Tailwind CSS 4, shadcn/ui, framer-motion)
-- 9 görsel üretildi: hero-bg, gallery-1..6, ad-bg, texture-bg
-- Tüm görseller /public/images/barber/ dizinine kaydedildi
+- /src/lib/config.ts oluşturuldu — tüm işletme bilgileri tek dosyada
+- Renk paletine turuncu (#d4722a), gri (#3a3a3a, #555) eklendi
+- Hero bölümü tamamen yeniden tasarlandı: nefes alan, sinematik, yeni arka plan
+- StatsSection: sayı sayma animasyonlu satış odaklı bölüm eklendi
+- StickyButtons: WhatsApp, Telefon, Randevu sabit butonları eklendi
+- ContactSection: 4 alanlı form (ad, telefon, email, mesaj), Google Maps, tüm bilgiler
+- Footer: tüm iletişim bilgileri, copyright, çalışma saatleri
+- Navigation: config'den bilgileri kullanıyor, orange renk aksanı
+- Prisma schema güncellendi (phone, email alanları)
+- API route güncellendi
+- Tüm spacing'ler açıldı (py-20, py-28)
+- Telefon mockups 2 satır olarak korundu
 
 Stage Summary:
-- Görseller üretildi, proje altyapısı hazır
-- Tasarım kararı: siyah/altın/amber renk paleti, tüm metinler küçük harf, sola yaslı
-- Geometrik şekiller yasak
-
----
-Task ID: 2
-Agent: main
-Task: tüm bileşenleri baştan yazma (kullanıcı geri bildirimi üzerine)
-
-Work Log:
-- globals.css: film grain, marquee, organic clip-paths, özel scrollbar, tüm animasyonlar
-- layout.tsx: dark tema, berber metadata
-- hero-section.tsx: parallax, karakter karakter text reveal, scroll animasyonları
-- section-divider.tsx: 5 farklı varyant (line, dots, slash, text, cross, zigzag)
-- services-section.tsx: resimli şeritler, organik clip-path, güçlü kontrast overlay, kutusuz
-- phone-mockups.tsx: otomatik kayan 2 satır marquee (sağ-sol döngü), küçük çerçeveler, etiketsiz
-- gallery.tsx: küçük resimler, her biri farklı giriş animasyonu, organik clip-paths
-- ad-banner.tsx: full-bleed arka plan, karesiz organik tasarım
-- inline-ad.tsx: ara reklamlar için küçük strip bileşeni
-- contact-section.tsx: organik tasarım, email formu, whatsapp/instagram/telefon
-- footer.tsx: büyük arka plan marquee metni, yatay düzen, sıkışık
-- navigation.tsx: scroll-based görünür navigation
-- api/contact/route.ts: form verilerini veritabanına kaydeder
-- prisma schema: ContactMessage modeli eklendi
-
-Stage Summary:
-- Tüm bileşenler sıfırdan yazıldı
-- Kare/kutu tasarımları kaldırıldı
-- Organik şekiller ve clip-path'ler kullanıldı
-- Bölüm ayırıcılar eklendi (dots, slash, zigzag, text, cross)
-- Telefon mockups otomatik kayan marquee olarak değiştirildi
-- Galeri küçük resimler ve benzersiz animasyonlarla yeniden tasarlandı
-- İletişim bölümü email formu ve organik tasarımla değiştirildi
-- Ara reklamlar eklendi (inline-ad)
-- Boşluklar azaltıldı, yoğunluk artırıldı
+- Tüm işletme bilgileri config dosyasından yönetiliyor
+- Sticky butonlar her zaman görünür
+- 4 alanlı iletişim formu çalışıyor
+- Google Maps gömülü + yol tarifi butonu
+- Turuncu/sarı/siyah/gri renk paleti aktif
+- Sayı animasyonlu satış bölümü eklendi
 - Lint hatasız, HTTP 200 doğrulandı

@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "berber — saç sanatının adresi",
-  description: "profesyonel berber hizmetleri, modern kesimler, klasik tıraş deneyimi. kalite ve stil bir arada.",
-  keywords: ["berber", "kuaför", "saç kesimi", "sakal tıraşı", "modern berber"],
+  title: "batuhan taşçı | men's hair — premium erkek kuaförü",
+  description: "profesyonel berber hizmetleri, modern kesimler, klasik tıraş. batuhan taşçı — kartal, istanbul.",
+  keywords: ["berber", "kuaför", "erkek kuaförü", "saç kesimi", "sakal tıraşı", "batuhan taşçı", "kartal", "istanbul"],
   icons: {
     icon: "/favicon.ico",
   },
