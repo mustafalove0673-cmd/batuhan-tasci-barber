@@ -4,169 +4,133 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import Image from 'next/image';
 
-const galleryItems = [
-  { src: '/images/barber/gallery-1.png', alt: 'fade kesim', label: 'fade', clipClass: 'organic-clip' },
-  { src: '/images/barber/gallery-2.png', alt: 'klasik tıraş', label: 'tıraş', clipClass: 'organic-clip-alt' },
-  { src: '/images/barber/gallery-3.png', alt: 'modern stil', label: 'stil', clipClass: 'organic-clip' },
-  { src: '/images/barber/gallery-4.png', alt: 'berber aletleri', label: 'aletler', clipClass: 'organic-clip-alt' },
-  { src: '/images/barber/gallery-5.png', alt: 'sakal şekillendirme', label: 'sakal', clipClass: 'organic-clip' },
-  { src: '/images/barber/gallery-6.png', alt: 'berber dükkanı', label: 'mekan', clipClass: 'organic-clip-alt' },
+const items = [
+  { src: '/images/barber/gallery-1.png', alt: 'fade kesim', label: 'fade' },
+  { src: '/images/barber/gallery-2.png', alt: 'klasik tıraş', label: 'tıraş' },
+  { src: '/images/barber/gallery-3.png', alt: 'modern stil', label: 'stil' },
+  { src: '/images/barber/gallery-4.png', alt: 'berber aletleri', label: 'aletler' },
+  { src: '/images/barber/gallery-5.png', alt: 'sakal', label: 'sakal' },
+  { src: '/images/barber/gallery-6.png', alt: 'mekan', label: 'mekan' },
+  { src: '/images/barber/gallery-1.png', alt: 'detay', label: 'detay' },
+  { src: '/images/barber/gallery-3.png', alt: 'portre', label: 'portre' },
 ];
 
-function GalleryItem({ item, index }: { item: typeof galleryItems[0]; index: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
-  const isEven = index % 2 === 0;
+/* each image gets a unique entrance animation */
+const animations = [
+  { initial: { y: 50, opacity: 0, scale: 0.92 } },
+  { initial: { x: -40, opacity: 0, rotate: -1.5 } },
+  { initial: { y: -40, opacity: 0, scale: 0.88 } },
+  { initial: { x: 40, opacity: 0, rotate: 1.5 } },
+  { initial: { scale: 0.8, opacity: 0 } },
+  { initial: { y: 30, x: -20, opacity: 0 } },
+  { initial: { x: 30, y: -20, opacity: 0, rotate: -1 } },
+  { initial: { scale: 0.85, rotate: 2, opacity: 0 } },
+];
 
-  // alternate sizes for asymmetric layout
-  const sizeClasses = index === 0
-    ? 'col-span-2 md:col-span-2 row-span-2 h-[400px] md:h-[500px]'
-    : index === 3
-    ? 'col-span-2 h-[250px] md:h-[300px]'
-    : 'col-span-1 h-[300px] md:h-[350px]';
-
-  return (
-    <motion.div
-      ref={ref}
-      className={`relative overflow-hidden group cursor-pointer ${sizeClasses}`}
-      initial={{ opacity: 0, y: 60, scale: 0.95 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{
-        duration: 1,
-        delay: index * 0.1,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      }}
-    >
-      {/* image container with organic clip */}
-      <div className={`absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105 ${item.clipClass}`}>
-        <Image
-          src={item.src}
-          alt={item.alt}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
-      </div>
-
-      {/* dark overlay on hover */}
-      <div className="absolute inset-0 bg-deep-black/0 group-hover:bg-deep-black/50 transition-all duration-700 z-10" />
-
-      {/* developing effect - bright flash on first view */}
-      <motion.div
-        className="absolute inset-0 bg-cream z-20 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={isInView ? [{ opacity: 0.8, transition: { duration: 0.1 } }, { opacity: 0, transition: { duration: 1.5, delay: 0.1 } }] : {}}
-      />
-
-      {/* grain texture on image */}
-      <div className="absolute inset-0 z-10 pointer-events-none opacity-30"
-        style={{
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E\")",
-        }}
-      />
-
-      {/* label - appears on hover */}
-      <motion.div
-        className="absolute bottom-0 left-0 right-0 p-4 md:p-6 z-30"
-        initial={false}
-      >
-        <div className="overflow-hidden">
-          <motion.p
-            className="text-gold text-xs font-mono tracking-[0.4em] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"
-          >
-            {item.label}
-          </motion.p>
-        </div>
-        <div className="overflow-hidden mt-1">
-          <motion.div
-            className="h-px bg-gold/50 w-0 group-hover:w-12 transition-all duration-700 ease-out delay-100"
-          />
-        </div>
-      </motion.div>
-
-      {/* corner accent - organic line */}
-      <div className="absolute top-3 right-3 z-20 w-6 h-6 opacity-0 group-hover:opacity-40 transition-opacity duration-500">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#c9a96e" strokeWidth="0.5">
-          <path d="M18 2c0 8-8 16-16 16" />
-          <path d="M22 6c0 8-8 16-16 16" />
-        </svg>
-      </div>
-    </motion.div>
-  );
-}
+const clips = [
+  'polygon(0% 4%, 4% 0%, 20% 1%, 45% 0%, 70% 1.5%, 96% 0%, 100% 3%, 100% 96%, 97% 100%, 75% 98%, 50% 100%, 25% 99%, 3% 100%, 0% 97%)',
+  'polygon(2% 0%, 18% 2%, 40% 0%, 60% 1.5%, 82% 0%, 100% 2%, 98% 20%, 100% 50%, 99% 80%, 100% 98%, 82% 100%, 60% 98%, 38% 100%, 18% 99%, 0% 100%, 2% 82%, 0% 50%, 1% 18%)',
+  'polygon(0% 3%, 8% 0%, 30% 1%, 55% 0%, 80% 1%, 100% 0%, 100% 97%, 92% 100%, 70% 99%, 45% 100%, 20% 98%, 0% 100%)',
+  'polygon(3% 0%, 25% 2%, 50% 0%, 75% 1%, 100% 0%, 97% 25%, 100% 50%, 98% 75%, 100% 100%, 75% 98%, 50% 100%, 25% 99%, 0% 100%, 2% 75%, 0% 50%, 3% 25%)',
+];
 
 export default function Gallery() {
   const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  });
-  const bgX = useTransform(scrollYProgress, [0, 1], ['0%', '10%']);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', 'end start'] });
+  const bgX = useTransform(scrollYProgress, [0, 1], ['0%', '8%']);
 
   return (
-    <section ref={sectionRef} className="relative py-24 md:py-32 overflow-hidden">
-      {/* animated background */}
-      <motion.div
-        className="absolute inset-0 opacity-20"
-        style={{ x: bgX }}
-      >
-        <div
-          className="w-[120%] h-full bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/barber/texture-bg.png')" }}
-        />
+    <section ref={sectionRef} id="galeri" className="relative py-14 md:py-20 overflow-hidden">
+      <motion.div className="absolute inset-0 opacity-10" style={{ x: bgX }}>
+        <div className="w-[115%] h-full bg-cover bg-center blur-sm" style={{ backgroundImage: "url('/images/barber/texture-bg.png')" }} />
       </motion.div>
-      <div className="absolute inset-0 bg-deep-black/80" />
+      <div className="absolute inset-0 bg-deep-black/85" />
 
       <div className="relative z-10 px-6 md:px-16 lg:px-24">
-        {/* section header */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-8 md:mb-10">
           <motion.p
-            className="text-gold/50 text-xs font-mono tracking-[0.4em]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="text-gold/50 text-[10px] font-mono tracking-[0.4em]"
+            initial={{ opacity: 0, x: -15 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
             &bull; galeri &bull;
           </motion.p>
           <motion.h2
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-cream/90 mt-3 tracking-tight"
-            initial={{ opacity: 0, y: 30 }}
+            className="text-3xl md:text-5xl font-bold text-cream/90 mt-2 tracking-tight"
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.15 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
           >
             işlerimiz
           </motion.h2>
-          <motion.div
-            className="mt-4 h-px bg-gold/20 max-w-[80px]"
-            initial={{ scaleX: 0, originX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-          />
         </div>
 
-        {/* asymmetric grid - not a standard grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 auto-rows-auto">
-          {galleryItems.map((item, i) => (
-            <GalleryItem key={item.src} item={item} index={i} />
-          ))}
+        {/* dense grid — small images, 4 cols on lg, 2 on mobile */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {items.map((item, i) => {
+            const anim = animations[i % animations.length];
+            const clip = clips[i % clips.length];
+            const heights = ['h-[160px] md:h-[200px]', 'h-[180px] md:h-[220px]', 'h-[150px] md:h-[190px]', 'h-[170px] md:h-[210px]'];
+            const h = heights[i % heights.length];
+
+            return (
+              <motion.div
+                key={`${item.src}-${i}`}
+                className={`relative overflow-hidden group cursor-pointer ${h}`}
+                initial={anim.initial}
+                whileInView={{ y: 0, x: 0, opacity: 1, scale: 1, rotate: 0 }}
+                viewport={{ once: true, margin: '-30px' }}
+                transition={{
+                  duration: 0.7 + (i % 3) * 0.15,
+                  delay: (i % 4) * 0.06,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+              >
+                <div
+                  className="absolute inset-0 transition-transform duration-600 ease-out group-hover:scale-105"
+                  style={{ clipPath: clip }}
+                >
+                  <Image src={item.src} alt={item.alt} fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                </div>
+                <div className="absolute inset-0 bg-deep-black/0 group-hover:bg-deep-black/40 transition-all duration-500 z-10" />
+                {/* grain */}
+                <div className="absolute inset-0 z-10 pointer-events-none opacity-15"
+                  style={{
+                    backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E\")",
+                  }}
+                />
+                {/* label on hover */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 z-30">
+                  <p className="text-gold text-[10px] font-mono tracking-[0.3em] translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out">
+                    {item.label}
+                  </p>
+                </div>
+                {/* corner accent */}
+                <div className="absolute top-2 right-2 z-20 w-4 h-4 opacity-0 group-hover:opacity-40 transition-opacity duration-400">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#c9a96e" strokeWidth="0.5">
+                    <path d="M18 2c0 8-8 16-16 16" />
+                  </svg>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
-        {/* bottom marquee text */}
+        {/* background marquee text */}
         <motion.div
-          className="mt-16 md:mt-24 overflow-hidden opacity-10"
+          className="mt-10 md:mt-14 overflow-hidden"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.1 }}
+          whileInView={{ opacity: 0.06 }}
           viewport={{ once: true }}
         >
-          <div className="flex whitespace-nowrap marquee">
-            <span className="text-6xl md:text-8xl lg:text-[10rem] font-bold text-cream tracking-tighter mx-4">
+          <div className="flex whitespace-nowrap marquee" style={{ animationDuration: '40s' }}>
+            <span className="text-4xl md:text-6xl font-bold text-cream tracking-tighter mx-3">
               kesim &bull; tıraş &bull; stil &bull; sakal &bull; fade &bull; klasik &bull; modern &bull; berber &bull;
             </span>
-            <span className="text-6xl md:text-8xl lg:text-[10rem] font-bold text-cream tracking-tighter mx-4">
+            <span className="text-4xl md:text-6xl font-bold text-cream tracking-tighter mx-3">
               kesim &bull; tıraş &bull; stil &bull; sakal &bull; fade &bull; klasik &bull; modern &bull; berber &bull;
             </span>
           </div>

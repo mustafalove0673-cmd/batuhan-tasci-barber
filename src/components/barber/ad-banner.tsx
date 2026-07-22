@@ -8,101 +8,81 @@ interface AdBannerProps {
   subtitle: string;
   ctaText: string;
   ctaLink: string;
-  bgImage?: string;
-  reverse?: boolean;
+  bgImage: string;
 }
 
-export default function AdBanner({ title, subtitle, ctaText, ctaLink, bgImage, reverse = false }: AdBannerProps) {
+export default function AdBanner({ title, subtitle, ctaText, ctaLink, bgImage }: AdBannerProps) {
   const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  });
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   return (
-    <section ref={ref} className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-      {/* parallax background */}
-      <motion.div
-        className="absolute inset-0"
-        style={{ scale: bgScale }}
-      >
-        <div
-          className="w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: `url('${bgImage || "/images/barber/ad-bg.png"}')` }}
-        />
+    <section ref={ref} className="relative overflow-hidden">
+      {/* full-bleed background */}
+      <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
+        <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url('${bgImage}')` }} />
       </motion.div>
-
-      {/* overlays */}
-      <div className="absolute inset-0 bg-deep-black/60" />
-      <div className={`absolute inset-0 bg-gradient-to-r ${reverse ? 'from-transparent via-deep-black/40 to-deep-black/90' : 'from-deep-black/90 via-deep-black/40 to-transparent'}`} />
-
-      {/* content */}
-      <div className={`relative z-10 h-full flex items-center px-6 md:px-16 lg:px-24 ${reverse ? 'justify-start' : 'justify-end'}`}>
-        <div className={`max-w-lg ${reverse ? '' : 'text-right'}`}>
-          <motion.div
-            className="overflow-hidden"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+      {/* heavy overlay for readability */}
+      <div className="absolute inset-0 bg-deep-black/75" />
+      {/* diagonal slash accent */}
+      <div className="absolute inset-0 z-[1] pointer-events-none">
+        <div className="absolute -top-20 -right-20 w-96 h-96 border border-gold/[0.06] rotate-12" />
+        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] border border-gold/[0.04] -rotate-6" />
+      </div>
+      {/* content — tight, organic */}
+      <div className="relative z-10 py-12 md:py-16 px-6 md:px-16 lg:px-24">
+        <div className="max-w-2xl">
+          <motion.p
+            className="text-gold/60 text-[10px] font-mono tracking-[0.5em] mb-3"
+            initial={{ opacity: 0, x: -15 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
           >
-            <motion.p
-              className={`text-gold/60 text-xs font-mono tracking-[0.5em] mb-4 ${reverse ? '' : 'text-right'}`}
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              &bull; özel teklif &bull;
-            </motion.p>
-          </motion.div>
-
+            &bull; özel teklif &bull;
+          </motion.p>
           <motion.h3
-            className={`text-3xl md:text-4xl lg:text-5xl font-bold text-cream/95 leading-[0.95] tracking-tight ${reverse ? '' : 'text-right'}`}
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-cream/95 leading-[1] tracking-tight"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.15 }}
+            transition={{ duration: 0.9, delay: 0.1 }}
           >
             {title}
           </motion.h3>
-
           <motion.p
-            className={`mt-4 text-sm text-cream/30 max-w-sm leading-relaxed ${reverse ? '' : 'ml-auto'}`}
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            className="mt-3 text-sm text-cream/40 max-w-md leading-relaxed"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
           >
             {subtitle}
           </motion.p>
-
           <motion.div
-            className={`mt-8 ${reverse ? '' : 'flex justify-end'}`}
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            className="mt-6"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.45 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
           >
             <a
               href={ctaLink}
-              className="group relative inline-flex items-center gap-3 border border-gold/30 px-8 py-4 text-gold text-xs tracking-[0.3em] font-mono overflow-hidden hover:bg-gold/10 transition-colors duration-500"
+              className="group relative inline-flex items-center gap-2 text-gold text-xs tracking-[0.3em] font-mono border-b border-gold/30 pb-1 hover:border-gold/60 transition-colors duration-300"
             >
-              <span className="relative z-10">{ctaText}</span>
+              <span>{ctaText}</span>
               <motion.span
-                className="inline-block relative z-10"
+                className="inline-block"
                 animate={{ x: [0, 4, 0] }}
                 transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
               >
                 →
               </motion.span>
-              <span className="absolute inset-0 bg-gold/5 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
             </a>
           </motion.div>
         </div>
       </div>
-
-      {/* edge lines */}
+      {/* top/bottom thin lines */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
     </section>

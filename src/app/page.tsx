@@ -3,6 +3,8 @@
 import dynamic from 'next/dynamic';
 import HeroSection from '@/components/barber/hero-section';
 import MarqueeStrip from '@/components/barber/marquee-strip';
+import SectionDivider from '@/components/barber/section-divider';
+import InlineAd from '@/components/barber/inline-ad';
 import ServicesSection from '@/components/barber/services-section';
 import PhoneMockups from '@/components/barber/phone-mockups';
 import Gallery from '@/components/barber/gallery';
@@ -18,51 +20,53 @@ export default function Home() {
       <Navigation />
 
       <main className="flex-1">
-        {/* hero - full viewport with parallax and text reveal */}
         <HeroSection />
 
-        {/* marquee strip - divider */}
-        <MarqueeStrip text="kesim tıraş stil sakal fade klasik modern" speed={25} />
+        <MarqueeStrip text="kesim tıraş stil sakal fade klasik modern" speed={22} opacity={0.04} />
 
-        {/* services section */}
+        <SectionDivider variant="dots" />
+
         <ServicesSection />
 
-        {/* phone mockups - instagram videos */}
+        <SectionDivider variant="slash" />
+
+        <InlineAd text="ilk ziyaretinize %20 indirim" subtext="sınırlı süre — kaçırmayın" />
+
+        <SectionDivider variant="text" label="instagram" />
+
         <PhoneMockups />
 
-        {/* marquee strip - divider */}
+        <SectionDivider variant="cross" />
+
         <MarqueeStrip text="berber deneyim kalite profesyonel" speed={35} opacity={0.03} />
 
-        {/* ad banner 1 */}
+        <InlineAd text="sakal bakım paketi — özel fiyat" subtext="kesim + şekillendirme + bakım birlikte" />
+
+        <SectionDivider variant="zigzag" />
+
+        <Gallery />
+
+        <SectionDivider variant="text" label="teklifler" />
+
         <AdBanner
-          title="ilk ziyaretinize özel"
-          subtitle="%20 indirim. sınırlı süre. profesyonel ekipten first-class berber deneyimi. kaçırmayın."
+          title="özel berber deneyimi"
+          subtitle="profesyonel ekipten first-class hizmet. detaylar ve randevu için hemen iletişime geçin."
           ctaText="hemen randevu al"
           ctaLink="#iletisim"
           bgImage="/images/barber/ad-bg.png"
         />
 
-        {/* gallery - unique asymmetric layout */}
-        <Gallery />
+        <SectionDivider variant="dots" />
 
-        {/* ad banner 2 - reversed */}
-        <AdBanner
-          title="sakal bakım paketi"
-          subtitle="sakal kesimi, şekillendirme ve bakım birlikte. özel fiyat avantajı ile tam berber deneyimi."
-          ctaText="detayları gör"
-          ctaLink="#iletisim"
-          bgImage="/images/barber/gallery-6.png"
-          reverse
-        />
+        <InlineAd text="her cuma özel indirim" subtext="takip edin, fırsatları kaçırmayın" />
 
-        {/* contact section with whatsapp, instagram, phone */}
+        <SectionDivider variant="slash" />
+
         <ContactSection />
 
-        {/* final marquee */}
-        <MarqueeStrip text="teşekkürler" speed={60} opacity={0.04} />
+        <MarqueeStrip text="teşekkürler" speed={55} opacity={0.03} />
       </main>
 
-      {/* footer */}
       <Footer />
     </div>
   );
